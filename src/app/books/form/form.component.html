@@ -1,0 +1,24 @@
+<div class="card">
+  <h3>Add new Book</h3>
+  <form class="row g-3 needs-validation" [formGroup]="bookForm" novalidate>
+    <div class="col-md-4">
+      <label class="form-label">Book</label>
+      <input type="text" class="form-control" formControlName="name" />
+    </div>
+    <div class="col-md-4">
+      <label class="form-label">Author</label>
+      <input type="text" class="form-control" formControlName="author" />
+    </div>
+    <div class="col-12">
+      <button
+        class="btn btn-primary"
+        type="submit"
+        [disabled]="bookForm.invalid"
+        (click)="submit()"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
+<button class="btn btn-info" routerLink="/"><</button>

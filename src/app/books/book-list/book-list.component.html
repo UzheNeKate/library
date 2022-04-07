@@ -1,0 +1,12 @@
+<button class="btn btn-primary" routerLink="/form">Add new</button>
+<h3>Books list</h3>
+<ul class="list-group">
+  <li
+    *ngFor="let book of books"
+    class="list-group-item"
+    routerLink="/info"
+    (click)="bookService.setInfo(book)"
+  >
+    {{ book.name }} - {{ book.author }}
+  </li>
+</ul>
